@@ -20,14 +20,15 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # Install dependencies from requirements.txt
+        pip install -r req.txt  # Update to reference req.txt
 
     - name: Build executable
       run: |
         .\build.bat  # Run the batch file to build the executable
 
     - name: Upload executable
-      uses: actions/upload-artifact@v3  # Update to the latest version
+      uses: actions/upload-artifact@v3  # Use the latest version
       with:
         name: autoclicker-executable
         path: dist/autoclicker.exe  # Path to the built executable
+
