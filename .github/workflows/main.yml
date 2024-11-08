@@ -26,9 +26,12 @@ jobs:
       run: |
         .\build.bat  # Run the batch file to build the executable
 
+    - name: List dist directory
+      run: |
+        dir dist  # List the contents of the dist directory
+
     - name: Upload executable
       uses: actions/upload-artifact@v3  # Use the latest version
       with:
         name: autoclicker-executable
         path: dist/autoclicker.exe  # Path to the built executable
-
