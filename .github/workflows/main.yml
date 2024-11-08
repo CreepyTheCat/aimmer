@@ -27,7 +27,7 @@ jobs:
         .\build.bat  # Run the batch file to build the executable
 
     - name: Upload executable
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3  # Update to the latest version
       with:
         name: autoclicker-executable
         path: dist/autoclicker.exe  # Path to the built executable
